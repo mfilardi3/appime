@@ -12,19 +12,19 @@ import { FormBuilder, FormGroup, Validators, AbstractControl } from '@angular/fo
 })
 export class HomePage {
 
-  quiabo: FormGroup;
+  formgroup: FormGroup;
   login:AbstractControl;
   senha:AbstractControl;
 
   constructor(public navCtrl: NavController, public formbuilder:FormBuilder) {
 
-    this.quiabo = formbuilder.group({
+    this.formgroup = formbuilder.group({
       login:['', Validators.required],
       senha:['', Validators.required]
     });
 
-    this.login = this.quiabo.controls['login'];
-    this.senha = this.quiabo.controls['senha'];
+    this.login = this.formgroup.controls['login'];
+    this.senha = this.formgroup.controls['senha'];
 
   }
 

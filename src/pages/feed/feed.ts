@@ -1,15 +1,10 @@
+import { Http, Headers } from '@angular/http';
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, ModalController } from 'ionic-angular';
 
 import { AddnewsPage } from './../addnews/addnews';
 
 
-/**
- * Generated class for the FeedPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
 
 @IonicPage()
 @Component({
@@ -18,15 +13,23 @@ import { AddnewsPage } from './../addnews/addnews';
 })
 export class FeedPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-  }
+  
+  news = [];
 
-  addnews() {
-    this.navCtrl.push(AddnewsPage)
+  constructor(public navCtrl: NavController, public modalCtrl: ModalController, public http: Http) {
+    this.news = []
+    this.http.get('http://192.168.43.75:5000/news').subscribe(res => {
+      console.log(res.json())
+      this.news = res.json() 
+    });
   }
+  
+   goToAddNewsPage() {
+   this.navCtrl.push(AddnewsPage)
+   };
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FeedPage');
+    console.log('a');
   }
-
+  
 }

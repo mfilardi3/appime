@@ -1,19 +1,38 @@
-<!--
-  Generated template for the FeedPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-<ion-header>
-
+<ion-header class="navbar">
   <ion-navbar>
     <ion-title>Feed de Notícias</ion-title>
   </ion-navbar>
-
 </ion-header>
 
-<ion-content padding>
-    <button ion-button full color="light" (click)="addnews()">
+<ion-content padding class="bebe">
+  <div class="background">
+    <ion-list *ngFor="let post of news">
+      <ion-card style="border-radius: 10% 10% 10% 10%">
+        <ion-card-content class="card">
+      <ion-item class="title1">
+        <ion-icon class="icon" name="mail"></ion-icon>
+        {{post.title}}
+      </ion-item>
+      <hr>
+      <ion-item class="subject"> 
+        {{post.subject}}
+      </ion-item>
+      <ion-item class="content">
+        {{post.content}}
+      </ion-item>
+      <ion-item class="info">
+        {{post.additional_info}}
+      </ion-item>
+      <hr>
+      <ion-item class="name">
+        {{post.author_name}}
+      </ion-item>
+      </ion-card-content>
+    </ion-card>
+    </ion-list>
+    <button ion-button color="light" (click)="goToAddNewsPage()">
       Adicionar Notícia
     </button> <br>
+  </div>
 </ion-content>
+

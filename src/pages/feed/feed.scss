@@ -1,3 +1,41 @@
 page-feed {
-
+    font-family: 'Segoe UI';
+    .bebe {
+        background-color: #98FB98; 
+    }
+    .title1 {
+        text-align: center;
+        font-style: bold;
+        font-size: 14px;
+       
+    }    
+    .name {
+        text-align: center;
+        font-family: 'Segoe UI';
+    }
+    .form {
+        float: left;
+    }
+ //   .background{
+  //      background-color: #98FB98;
+   //     margin: 0% 0% 0% 0%;
+    //}
+    element.style {
+        background: #98FB98;
+    }
+    .subject {
+        text-align: center;
+       
+    }
+    .content {
+        text-align: center;
+       
+    }
+    .info {
+        text-align: center;
+       
+    }
+    .card {
+       
+    }
 }
