@@ -4,7 +4,6 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
-import { Storage } from '@ionic/storage';
 
 
 import { MyApp } from './app.component';
@@ -16,10 +15,6 @@ import { AddnewsPage } from './../pages/addnews/addnews';
 
 import { AddnewsProvider } from '../providers/addnews/addnews';
 import { StoredataDirective } from './../directives/storedata/storedata';
-
-
-
-
 
 @NgModule({
   declarations: [
