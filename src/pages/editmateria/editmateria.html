@@ -1,0 +1,44 @@
+<!--
+  Generated template for the EditmateriaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Cálculo IV</ion-title>
+  </ion-navbar>
+  <button ion-button clear (click)="dismiss()">Cancelar</button>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col center text-center>N° de faltas</ion-col>
+      <ion-col center text-center>Pontos perdidos</ion-col>
+      <ion-col center text-center>Carga Horária</ion-col>
+      <ion-col center text-center>% Carga Horária</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <ion-input type="text" placeholder="5"></ion-input>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-input type="text" placeholder="15"></ion-input>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-input type="text" placeholder="75"></ion-input>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-input type="text" placeholder="7.14"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button ion-button center color="light">Salvar</button> <br>
+  <button ion-button center color="light">Excluir Matéria</button>
+    
+
+
+</ion-content>
