@@ -7,13 +7,16 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>Cálculo IV</ion-title>
+    <ion-title>{{bubu[0].name}}</ion-title>
   </ion-navbar>
   <button ion-button clear (click)="dismiss()">Cancelar</button>
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list-header>
+    <ion-item>{{bubu[0].name}}</ion-item>
+  </ion-list-header>
   <ion-grid>
     <ion-row>
       <ion-col center text-center>N° de faltas</ion-col>
@@ -23,20 +26,20 @@
     </ion-row>
     <ion-row>
       <ion-col center text-center>
-        <ion-input type="text" placeholder="5"></ion-input>
+        <ion-input type="text" placeholder="{{bubu[0].misses}}"></ion-input>
       </ion-col>
       <ion-col center text-center>
-        <ion-input type="text" placeholder="15"></ion-input>
+       <ion-input type="text" placeholder="{{bubu[0].pontos}}"></ion-input>
+      </ion-col> 
+      <ion-col center text-center>
+        <ion-input type="text" placeholder="{{bubu[0].workload}}"></ion-input>
       </ion-col>
       <ion-col center text-center>
-        <ion-input type="text" placeholder="75"></ion-input>
-      </ion-col>
-      <ion-col center text-center>
-        <ion-input type="text" placeholder="7.14"></ion-input>
-      </ion-col>
+        <ion-input type="text" placeholder="{{bubu[0].porcentagem}}"></ion-input>
+      </ion-col>> 
     </ion-row>
   </ion-grid>
-  <button ion-button center color="light">Salvar</button> <br>
+  <button ion-button center color="light" (click)="submit()">Salvar</button> <br>
   <button ion-button center color="light">Excluir Matéria</button>
     
 

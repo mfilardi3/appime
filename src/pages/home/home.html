@@ -1,34 +1,33 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      <h1>
-        IME APP
-      </h1>
-    </ion-title>
-  </ion-navbar>
-</ion-header>
-
-<ion-content padding>
-  <form [formGroup] = "formgroup">
-    <ion-item>
-      <ion-input placeholder="Usuário" formControlName="login"></ion-input>
-    </ion-item>
-    <ion-item *ngIf="login.hasError('required') && login.touched">
-      <p>Digite o Usuário</p>
-    </ion-item>
-    <ion-item>
-      <ion-input type="password" placeholder="Senha" formControlName="senha">
-        <ion-icon name="eye"></ion-icon>
-      </ion-input>
-    </ion-item>
-    <ion-item *ngIf="senha.hasError('required') && senha.touched">
-      <p>Digite a Senha</p>
-    </ion-item>
-    <button ion-button color="light" (click)="Entrar()" [disabled]='!formgroup.valid'>
-      Entrar
+    <ion-navbar>
+      <ion-title>
+        <h1>
+          IME APP
+        </h1>
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content>
+      <ion-img width="40%" height="50%" class="ime-logo" src="../../assets/imgs/logoime.png"></ion-img>
+      <ion-item>
+        <ion-input placeholder="Usuário" [(ngModel)]="login"></ion-input>
+      </ion-item>
+     <!-- <ion-item *ngIf="login.hasError('required') && login.touched">
+        <p>Digite o Usuário</p>
+      </ion-item>  -->
+      <ion-item>
+        <ion-input type="password" placeholder="Senha" [(ngModel)]="senha">
+          <ion-icon name="eye"></ion-icon>
+        </ion-input>
+      </ion-item>
+     <!-- <ion-item *ngIf="senha.hasError('required') && senha.touched"> 
+        <p>Digite a Senha</p>
+      </ion-item>  -->
+      <button ion-button color="light" (click)="Entrar()" class="login-button">
+        Entrar
+      </button>
+    <button ion-button color="light" (click)="gotocadastro()" class="signup-button">
+       Cadastre-se
     </button>
-  </form>
-  <button ion-button color="light" (click)="gotocadastro()">
-     Cadastre-se
-  </button>
-</ion-content>
+  </ion-content>

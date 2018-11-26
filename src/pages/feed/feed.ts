@@ -1,3 +1,4 @@
+import { config } from './../../app/main';
 import { Http } from '@angular/http';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, ModalController } from 'ionic-angular';
@@ -18,7 +19,7 @@ export class FeedPage {
 
   constructor(public navCtrl: NavController, public modalCtrl: ModalController, public http: Http) {
     this.news = []
-    this.http.get('http://192.168.43.75:5000/news').subscribe(res => {
+    this.http.get(config + 'news').subscribe(res => {
       console.log(res.json())
       this.news = res.json() 
     });

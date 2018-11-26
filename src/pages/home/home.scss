@@ -1,4 +1,29 @@
 page-home {
-
+    page-home {
+        .login-button {
+            background-color : #3CB371;
+            border-radius : 20px;
+            color: #f6f0ef;
+            width: 80vw;
+            margin-left: 10vw;
+            margin-top: 50vh;
+        }
+        .signup-button {
+            display: inline-block;
+            background: none!important;
+            border: none;
+            color : #3CB371;
+            width: 100vw;
+            text-align: center;
+            margin-top: 50vh;
+        }
+        .ime-logo {
+            position: absolute;
+            background: none;
+            margin-left: 30vw;
+            margin-top: 10vh;
+            display: inline-block;
+        }
+    }
 
 }

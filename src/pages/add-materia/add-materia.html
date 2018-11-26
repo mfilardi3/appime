@@ -1,0 +1,37 @@
+<!--
+  Generated template for the AddMateriaPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Adicionar Matéria</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list-header>
+    <ion-item> 
+      <ion-input type="text" placeholder="Matéria"></ion-input>
+    </ion-item>
+  </ion-list-header>
+  <ion-grid>
+    <ion-row>
+      <ion-col center text-center>N° de faltas</ion-col>
+      <ion-col center text-center>Carga Horária</ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col center text-center>
+        <ion-input type="text" placeholder="Faltas"></ion-input>
+      </ion-col>
+      <ion-col center text-center>
+        <ion-input type="text" placeholder="Carga Horária"></ion-input>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  <button ion-button center color="light" (click)="submit()">Salvar</button> <br>
+</ion-content>

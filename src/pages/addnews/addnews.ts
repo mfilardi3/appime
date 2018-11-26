@@ -1,3 +1,4 @@
+import { config } from './../../app/main';
 import { FeedPage } from './../feed/feed';
 import { Http, Headers } from '@angular/http';
 import { Component, Injectable } from '@angular/core';
@@ -37,7 +38,7 @@ export class AddnewsPage {
 
     };
     console.log(post);
-    this.http.post('http://192.168.43.75:5000/news', post)
+    this.http.post(config + 'news', post)
       .subscribe(res => {
         console.log(res);
         this.navCtrl.push(FeedPage);
