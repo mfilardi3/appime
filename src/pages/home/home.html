@@ -1,33 +1,41 @@
 <ion-header>
-    <ion-navbar>
-      <ion-title>
-        <h1>
-          IME APP
-        </h1>
-      </ion-title>
-    </ion-navbar>
+
   </ion-header>
   
-  <ion-content>
-      <ion-img width="40%" height="50%" class="ime-logo" src="../../assets/imgs/logoime.png"></ion-img>
+  <ion-content padding>
       <ion-item>
-        <ion-input placeholder="Usuário" [(ngModel)]="login"></ion-input>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+          <br>
+        <ion-input placeholder="Usuário" [(ngModel)]="login" style="margin-top:20%"></ion-input>
       </ion-item>
      <!-- <ion-item *ngIf="login.hasError('required') && login.touched">
         <p>Digite o Usuário</p>
       </ion-item>  -->
       <ion-item>
-        <ion-input type="password" placeholder="Senha" [(ngModel)]="senha">
+        <ion-input type="password" placeholder="Senha" [(ngModel)]="senha" >
           <ion-icon name="eye"></ion-icon>
         </ion-input>
       </ion-item>
      <!-- <ion-item *ngIf="senha.hasError('required') && senha.touched"> 
         <p>Digite a Senha</p>
       </ion-item>  -->
-      <button ion-button color="light" (click)="Entrar()" class="login-button">
+      <br>
+      <br>
+      <br>
+      <button ion-button color="blue" (click)="Entrar()" class="login-button" style="width: 80%; margin-left: 10%; border-radius: 20px; ">
         Entrar
-      </button>
-    <button ion-button color="light" (click)="gotocadastro()" class="signup-button">
+      </button> <br>
+    <button ion-button color="light" (click)="gotocadastro()" class="signup-button" style="width: 80%; margin-left: 10%; border-radius: 20px; color: blue">
        Cadastre-se
     </button>
   </ion-content>

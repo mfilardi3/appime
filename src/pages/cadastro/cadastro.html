@@ -64,10 +64,11 @@
     <ion-item *ngIf="senha2.hasError('required') && senha2.touched">
       <p>Digite a senha</p>
     </ion-item>
-    <ion-item *ngIf="senha1 !== senha2 && senha1.dirty && senha2.dirty">
+    <ion-item *ngIf="senha1 == senha2 && senha1.dirty && senha2.dirty">
       <p>Senhas diferentes</p>
     </ion-item>
-    <button ion-button color="light" (click)="cadastrar()">
+    <br>
+    <button ion-button color="blue" (click)="cadastrar()" style="width: 80%; margin-left: 10%; border-radius: 20px;">
       Cadastrar Usuário
     </button>
   </form>  

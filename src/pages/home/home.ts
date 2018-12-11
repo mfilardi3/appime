@@ -35,7 +35,7 @@ export class HomePage {
       password: this.senha,
     };
     console.log(user)
-   this.http.post(config + 'users/login', user)
+   this.http.post('http://192.168.43.75:5000/' + 'users/login', user)
     .subscribe (res => {
       console.log(res)
      
